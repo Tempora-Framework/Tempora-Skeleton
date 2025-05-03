@@ -2,11 +2,11 @@
 
 namespace App\Controllers\Accounts;
 
-use Tempora\Attributes\RouteAttribute;
-use Tempora\Controllers\Controller;
 use App\Enums\Path;
 use App\Factories\NavbarFactory;
 use App\Models\Repositories\ResetPasswordRepository;
+use Tempora\Attributes\RouteAttribute;
+use Tempora\Controllers\Controller;
 use Tempora\Utils\System;
 
 class ResetController extends Controller {

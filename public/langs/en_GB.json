@@ -18,11 +18,9 @@
 	"MAIN_NAME_OBJECT": "Name",
 
 	"NAVBAR_HOME": "Home",
-	"NAVBAR_DASHBOARD": "Dashboard",
 	"NAVBAR_LOGIN": "Login",
 	"NAVBAR_REGISTER": "Create account",
 	"NAVBAR_DISCONNECT": "Logout",
-	"NAVBAR_ACCOUNT": "Account",
 
 	"MAIL_RESET_PASSWORD_OBJECT": "Reset password",
 	"MAIL_RESET_PASSWORD_BODY": "Please update your password using this URL: https://$[domain]/reset/$[link]",
@@ -42,10 +40,6 @@
 	"REGISTER_SUBMIT": "Create account",
 	"REGISTER_UNIDENTICAL_PASSWORD": "The passwords you entered do not match.",
 	"REGISTER_ALREADY_EXIST": "Account \"$[email]\" already exist.",
-
-	"ACCOUNT_TITLE": "Account",
-
-	"DASHBOARD_TITLE": "Dashboard",
 
 	"ACCESSIBILITY_LANG": "Languages",
 

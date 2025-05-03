@@ -2,13 +2,13 @@
 
 namespace App\Models\Repositories;
 
-use Tempora\Enums\Table;
 use App\Models\Entities\ResetPassword;
+use PDO;
+use Tempora\Enums\Table;
 use Tempora\Models\Services\MailService;
 use Tempora\Utils\ApplicationData;
 use Tempora\Utils\Lang;
 use Tempora\Utils\System;
-use PDO;
 
 class ResetPasswordRepository extends ResetPassword {
 

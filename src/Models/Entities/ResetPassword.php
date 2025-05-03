@@ -2,9 +2,9 @@
 
 namespace App\Models\Entities;
 
-use Tempora\Utils\ApplicationData;
-use Tempora\Enums\Table;
 use PDO;
+use Tempora\Enums\Table;
+use Tempora\Utils\ApplicationData;
 
 class ResetPassword {
 	private ?string $uid;

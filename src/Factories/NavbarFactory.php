@@ -14,15 +14,6 @@ class NavbarFactory extends Navbar {
 			icon: "ri-home-2-line",
 			class: "button button_secondary"
 		);
-		parent::add(
-			title: "NAVBAR_DASHBOARD",
-			url: Route::getPath(name: "app_dashboard_get"),
-			class: "button button_secondary",
-			needLoginToBe: true,
-			accessRoles: [
-				Role::ADMINISTRATOR->value
-			]
-		);
 
 		parent::add(
 			title: "NAVBAR_LOGIN",
@@ -35,12 +26,6 @@ class NavbarFactory extends Navbar {
 			url: Route::getPath(name: "app_account_register_get"),
 			class: "button",
 			needLoginToBe: false,
-		);
-		parent::add(
-			title: "NAVBAR_ACCOUNT",
-			url: Route::getPath(name: "app_account_get"),
-			class: "button",
-			needLoginToBe: true,
 		);
 		parent::add(
 			title: "NAVBAR_DISCONNECT",

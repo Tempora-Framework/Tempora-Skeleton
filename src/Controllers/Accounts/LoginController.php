@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Accounts;
 
-use Tempora\Attributes\RouteAttribute;
-use Tempora\Controllers\Controller;
 use App\Enums\Path;
 use App\Factories\NavbarFactory;
+use Tempora\Attributes\RouteAttribute;
+use Tempora\Controllers\Controller;
 
 class LoginController extends Controller {
 	#[RouteAttribute(

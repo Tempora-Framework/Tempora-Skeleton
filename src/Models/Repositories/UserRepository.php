@@ -2,13 +2,13 @@
 
 namespace App\Models\Repositories;
 
-use Tempora\Enums\Table;
 use App\Models\Entities\User;
-use Tempora\Utils\ApplicationData;
-use Tempora\Utils\System;
-use Tempora\Traits\UserTrait;
 use Exception;
 use PDO;
+use Tempora\Enums\Table;
+use Tempora\Traits\UserTrait;
+use Tempora\Utils\ApplicationData;
+use Tempora\Utils\System;
 
 class UserRepository extends User {
 

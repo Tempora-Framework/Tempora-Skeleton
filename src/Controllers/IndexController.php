@@ -3,9 +3,9 @@
 namespace App\Controllers;
 
 use App\Enums\Path;
+use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
-use App\Factories\NavbarFactory;
 
 class IndexController extends Controller {
 	#[RouteAttribute(

@@ -2,13 +2,12 @@
 
 namespace App\Controllers\Accounts;
 
+use App\Models\Repositories\UserRepository;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
-use App\Models\Repositories\UserRepository;
 use Tempora\Utils\Cookie;
 use Tempora\Utils\Lang;
 use Tempora\Utils\System;
-use Exception;
 
 class LoginEventController extends Controller {
 	#[RouteAttribute(
