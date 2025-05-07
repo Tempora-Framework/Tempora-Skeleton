@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78fd93b21dcb5a26dbedc7bddda3125c",
+    "content-hash": "f13b66c07bb426bb0788633fa584cf5a",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -466,17 +466,11 @@
         },
         {
             "name": "tempora-framework/tempora",
-            "version": "v1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Tempora-Framework/Tempora.git",
-                "reference": "513025b84ace3d3161d4f5f5eae61132fb76631d"
-            },
+            "version": "dev-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Tempora-Framework/Tempora/zipball/513025b84ace3d3161d4f5f5eae61132fb76631d",
-                "reference": "513025b84ace3d3161d4f5f5eae61132fb76631d",
-                "shasum": ""
+                "type": "path",
+                "url": "../Tempora",
+                "reference": "62ffde97fe4077a49af36fe5c0919719a65f47e6"
             },
             "require": {
                 "php": "^8.3 <8.4",
@@ -489,7 +483,6 @@
                     "Tempora\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "CC-BY-4.0"
             ],
@@ -508,11 +501,10 @@
                 "mvc",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/Tempora-Framework/Tempora/issues",
-                "source": "https://github.com/Tempora-Framework/Tempora/tree/v1.2.1"
-            },
-            "time": "2025-05-03T13:24:46+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "vlucas/phpdotenv",
@@ -602,7 +594,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "tempora-framework/tempora": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

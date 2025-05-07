@@ -2,7 +2,6 @@
 
 namespace App\Factories;
 
-use Tempora\Enums\Role;
 use Tempora\Utils\Cache\Route;
 use Tempora\Utils\Navbar;
 
@@ -28,8 +27,9 @@ class NavbarFactory extends Navbar {
 			needLoginToBe: false,
 		);
 		parent::add(
-			title: "NAVBAR_DISCONNECT",
+			title: "",
 			url: Route::getPath(name: "app_account_disconnect_get"),
+			icon: "ri-logout-box-line",
 			class: "button",
 			needLoginToBe: true,
 		);
