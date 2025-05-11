@@ -27,7 +27,7 @@ class LoginResetController extends Controller {
 
 		require Path::LAYOUT->value . "/header.php";
 
-		(new NavbarFactory())->render();
+		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/login/reset/index.php";
 

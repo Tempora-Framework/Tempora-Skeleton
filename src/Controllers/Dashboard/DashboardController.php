@@ -1,20 +1,24 @@
 <?php
 
-namespace App\Controllers\Accounts;
+namespace App\Controllers\Dashboard;
 
 use App\Enums\Path;
+use App\Enums\Role;
 use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
-class RegisterController extends Controller {
+class DashboardController extends Controller{
 	#[RouteAttribute(
-		path: "/register",
-		name: "app_account_register_get",
+		path: "/dashboard",
+		name: "app_dashboard_get",
 		method: "GET",
-		description: "Register page",
-		title: "REGISTER_TITLE",
-		needLoginToBe: false
+		description: "Dashboard page",
+		title: "DASHBOARD_TITLE",
+		needLoginToBe: true,
+		accessRoles: [
+			Role::ADMINISTRATOR
+		]
 	)]
 
 	public function __invoke(): void {
@@ -29,7 +33,7 @@ class RegisterController extends Controller {
 
 		(new NavbarFactory)->render();
 
-		require Path::LAYOUT->value . "/register/index.php";
+		require Path::LAYOUT->value . "/dashboard/index.php";
 
 		include Path::LAYOUT->value . "/footer.php";
 	}

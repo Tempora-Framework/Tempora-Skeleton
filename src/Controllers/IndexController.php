@@ -25,7 +25,7 @@ class IndexController extends Controller {
 
 		require Path::LAYOUT->value . "/header.php";
 
-		(new NavbarFactory())->render();
+		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/index/index.php";
 

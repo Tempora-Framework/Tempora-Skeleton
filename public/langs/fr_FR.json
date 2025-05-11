@@ -21,9 +21,12 @@
 	"NAVBAR_LOGIN": "Connexion",
 	"NAVBAR_REGISTER": "Créer un compte",
 	"NAVBAR_DISCONNECT": "Déconnexion",
+	"NAVBAR_DASHBOARD": "Tableau de bord",
 
 	"MAIL_RESET_PASSWORD_OBJECT": "Réinitialisation du mot de passe",
 	"MAIL_RESET_PASSWORD_BODY": "Merci de mettre à jour votre mot de passe avec l'URL suivante : https://$[domain]/reset/$[link]",
+
+	"INDEX_TITLE": "Accueil",
 
 	"LOGIN_TITLE": "Connexion",
 	"LOGIN_SUBMIT": "Se connecter",
@@ -40,6 +43,8 @@
 	"REGISTER_SUBMIT": "Créer le compte",
 	"REGISTER_UNIDENTICAL_PASSWORD": "Les mots de passe saisis ne correspondent pas.",
 	"REGISTER_ALREADY_EXIST": "Le compte \"$[email]\" existe déjà.",
+
+	"DASHBOARD_TITLE": "Tableau de bord",
 
 	"ACCESSIBILITY_LANG": "Langues",
 

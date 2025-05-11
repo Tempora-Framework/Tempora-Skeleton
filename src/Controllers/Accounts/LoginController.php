@@ -33,7 +33,7 @@ class LoginController extends Controller {
 
 		require Path::LAYOUT->value . "/header.php";
 
-		(new NavbarFactory())->render();
+		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/login/index.php";
 

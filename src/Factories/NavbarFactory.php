@@ -2,6 +2,7 @@
 
 namespace App\Factories;
 
+use App\Enums\Role;
 use Tempora\Utils\Cache\Route;
 use Tempora\Utils\Navbar;
 
@@ -26,6 +27,18 @@ class NavbarFactory extends Navbar {
 			class: "button",
 			needLoginToBe: false,
 		);
+
+		parent::add(
+			title: "NAVBAR_DASHBOARD",
+			url: Route::getPath(name: "app_dashboard_get"),
+			icon: "ri-speed-up-line",
+			class: "button",
+			needLoginToBe: true,
+			accessRoles: [
+				Role::ADMINISTRATOR->value,
+			]
+		);
+
 		parent::add(
 			title: "",
 			url: Route::getPath(name: "app_account_disconnect_get"),
@@ -33,14 +46,5 @@ class NavbarFactory extends Navbar {
 			class: "button",
 			needLoginToBe: true,
 		);
-	}
-
-	/**
-	 * Render navbar
-	 *
-	 * @return void
-	 */
-	public function render(): void {
-		parent::render();
 	}
 }
