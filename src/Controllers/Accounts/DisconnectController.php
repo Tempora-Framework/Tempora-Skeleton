@@ -4,6 +4,8 @@ namespace App\Controllers\Accounts;
 
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
+use Tempora\Utils\Cookie;
+use Tempora\Utils\JWT;
 use Tempora\Utils\System;
 
 class DisconnectController extends Controller {
@@ -16,6 +18,16 @@ class DisconnectController extends Controller {
 
 	public function __invoke(): void {
 		session_regenerate_id();
+
+		(new JWT)->delete(token: $_COOKIE["JWT"]);
+
+		$jwtCookie = new Cookie;
+		$jwtCookie
+			->setName(name: "JWT")
+			->setValue(value: "")
+			->setExpire(expire: 0)
+		;
+		$jwtCookie->send();
 
 		unset($_SESSION["user"]);
 

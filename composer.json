@@ -1,9 +1,19 @@
 {
 	"name": "tempora/tempora-skeleton",
 
+	"repositories": {
+		"tempora": {
+			"type": "path",
+			"url": "../Tempora",
+			"options": {
+				"symlink": true
+			}
+		}
+	},
+
 	"require": {
 		"php": "^8.3 <8.4",
-		"tempora-framework/tempora": "1.2.3"
+		"tempora-framework/tempora": "dev-dev"
 	},
 
 	"autoload": {

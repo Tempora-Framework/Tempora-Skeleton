@@ -6,6 +6,7 @@ use App\Models\Repositories\UserRepository;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 use Tempora\Utils\Cookie;
+use Tempora\Utils\JWT;
 use Tempora\Utils\Lang;
 use Tempora\Utils\System;
 
@@ -44,6 +45,16 @@ class LoginEventController extends Controller {
 				];
 			} else {
 				$_SESSION["user"]["uid"] = $uid;
+
+				$cookieJWT = new Cookie;
+				$cookieJWT
+					->setName(name: "JWT")
+					->setValue(value: (new JWT)->create())
+					->setSecure(secure: true)
+					->setHttpOnly(httponly: true)
+				;
+				$cookieJWT->send();
+
 				System::redirect(url: "/");
 			}
 		}

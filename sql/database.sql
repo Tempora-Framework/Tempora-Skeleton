@@ -59,6 +59,21 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Table structure for table `user_tokens`
+--
+
+CREATE TABLE `user_tokens` (
+	`uid` varchar(32) NOT NULL,
+	`uid_user` varchar(32) NOT NULL,
+	`ip_address` varchar(255) NOT NULL,
+	`token` text NOT NULL,
+	`date_create` datetime NOT NULL DEFAULT current_timestamp(),
+	PRIMARY KEY (`uid`),
+	KEY `user_tokens_users_FK` (`uid_user`),
+	CONSTRAINT `user_tokens_users_FK` FOREIGN KEY (`uid_user`) REFERENCES `users` (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Table structure for table `user_reset_password`
 --
 
