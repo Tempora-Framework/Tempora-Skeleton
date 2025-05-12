@@ -53,15 +53,15 @@
 	"ERROR_404": "Unknown pages.",
 	"ERROR_403": "Unauthorised access.",
 
-	"TOOLBAR_TITLE": "Debug mode",
-	"TOOLBAR_LANG_TITLE": "Languages",
-	"TOOLBAR_MS_TITLE": "Loading time",
-	"TOOLBAR_PAGEDATA_TITLE": "Page data",
-	"TOOLBAR_SESSION_TITLE": "Session",
-	"TOOLBAR_POST_TITLE": "POST",
-	"TOOLBAR_GET_TITLE": "GET",
-	"TOOLBAR_COOKIE_TITLE": "Cookies",
-	"TOOLBAR_SQL_TITLE": "SQL queries",
-	"TOOLBAR_USER_TITLE": "User",
-	"TOOLBAR_HTTP_CODE_TITLE": "HTTP code"
+	"CHRONOS_TITLE": "Chronos",
+	"CHRONOS_LANG_TITLE": "Languages",
+	"CHRONOS_MS_TITLE": "Loading time",
+	"CHRONOS_PAGEDATA_TITLE": "Page data",
+	"CHRONOS_SESSION_TITLE": "Session",
+	"CHRONOS_POST_TITLE": "POST",
+	"CHRONOS_GET_TITLE": "GET",
+	"CHRONOS_COOKIE_TITLE": "Cookies",
+	"CHRONOS_SQL_TITLE": "SQL queries",
+	"CHRONOS_USER_TITLE": "User",
+	"CHRONOS_HTTP_CODE_TITLE": "HTTP code"
 }

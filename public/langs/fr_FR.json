@@ -53,15 +53,15 @@
 	"ERROR_404": "Page inconnue.",
 	"ERROR_403": "Accès non autorisé.",
 
-	"TOOLBAR_TITLE": "Mode débogage",
-	"TOOLBAR_LANG_TITLE": "Langues",
-	"TOOLBAR_MS_TITLE": "Temps de chargement",
-	"TOOLBAR_PAGEDATA_TITLE": "Données de la page",
-	"TOOLBAR_SESSION_TITLE": "Session",
-	"TOOLBAR_POST_TITLE": "POST",
-	"TOOLBAR_GET_TITLE": "GET",
-	"TOOLBAR_COOKIE_TITLE": "Cookies",
-	"TOOLBAR_SQL_TITLE": "Requètes SQL",
-	"TOOLBAR_USER_TITLE": "Utilisateur",
-	"TOOLBAR_HTTP_CODE_TITLE": "Code HTTP"
+	"CHRONOS_TITLE": "Chronos",
+	"CHRONOS_LANG_TITLE": "Langues",
+	"CHRONOS_MS_TITLE": "Temps de chargement",
+	"CHRONOS_PAGEDATA_TITLE": "Données de la page",
+	"CHRONOS_SESSION_TITLE": "Session",
+	"CHRONOS_POST_TITLE": "POST",
+	"CHRONOS_GET_TITLE": "GET",
+	"CHRONOS_COOKIE_TITLE": "Cookies",
+	"CHRONOS_SQL_TITLE": "Requètes SQL",
+	"CHRONOS_USER_TITLE": "Utilisateur",
+	"CHRONOS_HTTP_CODE_TITLE": "Code HTTP"
 }
