@@ -3,6 +3,7 @@
 namespace App\Controllers\Accounts;
 
 use App\Models\Repositories\UserRepository;
+use Exception;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 use Tempora\Utils\Cookie;
