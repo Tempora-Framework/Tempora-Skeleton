@@ -3,7 +3,7 @@
 
 	"require": {
 		"php": "^8.3 <8.4",
-		"tempora-framework/tempora": "v1.2.4"
+		"tempora-framework/tempora": "^1.2"
 	},
 
 	"autoload": {
