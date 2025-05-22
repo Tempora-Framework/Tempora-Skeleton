@@ -529,16 +529,16 @@
         },
         {
             "name": "tempora-framework/tempora",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tempora-Framework/Tempora.git",
-                "reference": "33bb25ebf74e21da14e94242078ca84a18805871"
+                "reference": "f1ec2911c74db0f376e51e3933052929894a1f1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tempora-Framework/Tempora/zipball/33bb25ebf74e21da14e94242078ca84a18805871",
-                "reference": "33bb25ebf74e21da14e94242078ca84a18805871",
+                "url": "https://api.github.com/repos/Tempora-Framework/Tempora/zipball/f1ec2911c74db0f376e51e3933052929894a1f1a",
+                "reference": "f1ec2911c74db0f376e51e3933052929894a1f1a",
                 "shasum": ""
             },
             "require": {
@@ -574,9 +574,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Tempora-Framework/Tempora/issues",
-                "source": "https://github.com/Tempora-Framework/Tempora/tree/v1.2.4"
+                "source": "https://github.com/Tempora-Framework/Tempora/tree/v1.2.5"
             },
-            "time": "2025-05-13T20:51:14+00:00"
+            "time": "2025-05-17T19:38:19+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

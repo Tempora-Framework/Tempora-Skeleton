@@ -20,10 +20,15 @@ class LoginResetController extends Controller {
 	public function __invoke(): void {
 		$pageData = $this->getPageData();
 
-		$scripts = [
-			"/scripts/engine.js",
-			"/scripts/theme.js"
-		];
+		$this->setStyles(styles: [
+			"/assets/styles/main.css",
+			"/assets/styles/remixicon.css"
+		]);
+
+		$this->setScripts(scripts: [
+			"/assets/scripts/engine.js",
+			"/assets/scripts/theme.js"
+		]);
 
 		require Path::LAYOUT->value . "/header.php";
 

@@ -31,10 +31,15 @@ class ResetController extends Controller {
 		if ($resetPasswordRepo->getUid() === null)
 			System::redirect(url: "/");
 
-		$scripts = [
-			"/scripts/engine.js",
-			"/scripts/theme.js"
-		];
+		$this->setStyles(styles: [
+			"/assets/styles/main.css",
+			"/assets/styles/remixicon.css"
+		]);
+
+		$this->setScripts(scripts: [
+			"/assets/scripts/engine.js",
+			"/assets/scripts/theme.js"
+		]);
 
 		require Path::LAYOUT->value . "/header.php";
 

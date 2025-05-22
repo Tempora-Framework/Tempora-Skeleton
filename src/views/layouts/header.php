@@ -12,18 +12,8 @@
 	<?php } ?>
 
 	<title><?= $pageData["page_title"] ?? APP_NAME . " - " . Lang::translate(key: "MAIN_ERROR") ?></title>
-	<link rel="stylesheet" href="/styles/main.css">
-	<link rel="stylesheet" href="/styles/remixicon.css">
 
-	<?php
-		if (isset($scripts)) {
-			foreach ($scripts as $script) {
-	?>
-				<script defer src="<?= $script ?>"></script>
-	<?php
-			}
-		}
-	?>
+	<?php $this->includeAssets(); ?>
 </head>
 <body>
 	<main>

@@ -4,4 +4,6 @@
 vendor
 .env
 logs/*
+src/cache/*
 !.gitkeep
+*.min.*
