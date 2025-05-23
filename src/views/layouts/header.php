@@ -14,6 +14,7 @@
 	<title><?= $pageData["page_title"] ?? APP_NAME . " - " . Lang::translate(key: "MAIN_ERROR") ?></title>
 
 	<?php $this->includeAssets(); ?>
+	<?php $this->includePayloads(); ?>
 </head>
 <body>
 	<main>
