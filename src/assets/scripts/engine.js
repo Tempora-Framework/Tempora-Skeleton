@@ -152,7 +152,7 @@ setInterval(() => {
 	}
 }, 1000);
 
-const DOMnotification = document.getElementById("main_notification");
+let DOMnotification = document.getElementById("main_notification");
 if (isElementExist(DOMnotification)) {
 	DOMnotification.addEventListener("click", () => {
 		DOMnotification.remove();
