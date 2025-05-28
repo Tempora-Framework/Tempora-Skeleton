@@ -59,6 +59,20 @@ function getCookie(name) {
 }
 
 /**
+ * Get payload from DOM
+ *
+ * @param {string} payload
+ *
+ * @returns {string}
+ */
+function getPayload(payload) {
+	let payloads = document.getElementById("payloads");
+	if (typeof payloads !== "undefined") {
+		return document.querySelector(`[data-payload-${payload}]`).dataset[`payload${payload.charAt(0).toUpperCase() + payload.slice(1)}`];
+	}
+}
+
+/**
  * Lang function
  *
  * @param {string} key
