@@ -6,4 +6,5 @@ vendor
 logs/*
 src/cache/*
 !.gitkeep
+public/assets/*
 *.min.*

@@ -52,6 +52,10 @@ body {
 	transition: 200ms;
 }
 
+.hidden {
+	display: none;
+}
+
 /* Buttons
    ============================================== */
 
