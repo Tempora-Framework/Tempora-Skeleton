@@ -2,7 +2,7 @@
 	"name": "tempora/tempora-skeleton",
 
 	"require": {
-		"php": "^8.3 <8.4",
+		"php": "^8.3",
 		"tempora-framework/tempora": "^1.2"
 	},
 
