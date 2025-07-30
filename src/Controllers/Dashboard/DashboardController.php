@@ -4,7 +4,6 @@ namespace App\Controllers\Dashboard;
 
 use App\Enums\Path;
 use App\Enums\Role;
-use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
@@ -35,8 +34,6 @@ class DashboardController extends Controller{
 		]);
 
 		require Path::LAYOUT->value . "/header.php";
-
-		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/dashboard/index.php";
 
