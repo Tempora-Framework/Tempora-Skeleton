@@ -7,13 +7,14 @@ use App\Enums\Role;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
-class DashboardController extends Controller{
+class DashboardController extends Controller {
 	#[RouteAttribute(
 		path: "/dashboard",
 		name: "app_dashboard_get",
 		method: "GET",
 		description: "Dashboard page",
 		title: "DASHBOARD_TITLE",
+		translateTitle: true,
 		needLoginToBe: true,
 		accessRoles: [
 			Role::ADMINISTRATOR
