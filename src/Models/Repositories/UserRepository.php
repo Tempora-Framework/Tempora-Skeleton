@@ -43,6 +43,32 @@ class UserRepository extends User {
 	}
 
 	/**
+	 * Hydrate user data from database
+	 *
+	 * @return self
+	 */
+	public function hydrate(): self {
+		$userData = ApplicationData::request(
+			query: "SELECT uid, name, surname, email, to_modify FROM " . Table::USERS->value . " WHERE uid = :uid",
+			data: [
+				"uid" => $this->getUid()
+			],
+			returnType: PDO::FETCH_ASSOC,
+			singleValue: true
+		);
+
+		if ($userData != null) {
+			$this->setUid(uid: $userData["uid"]);
+			$this->setName(name: $userData["name"]);
+			$this->setSurname(surname: $userData["surname"]);
+			$this->setEmail(email: $userData["email"]);
+			$this->setToModify(toModify: (bool)$userData["to_modify"]);
+		}
+
+		return $this;
+	}
+
+	/**
 	 * Set password
 	 *
 	 * @return void

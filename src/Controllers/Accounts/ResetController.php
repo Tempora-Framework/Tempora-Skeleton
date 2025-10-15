@@ -3,7 +3,6 @@
 namespace App\Controllers\Accounts;
 
 use App\Enums\Path;
-use App\Factories\NavbarFactory;
 use App\Models\Repositories\ResetPasswordRepository;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
@@ -16,6 +15,7 @@ class ResetController extends Controller {
 		method: "GET",
 		description: "Reset password page",
 		title: "RESET_TITLE",
+		translateTitle: true,
 		needLoginToBe: false
 	)]
 
@@ -42,8 +42,6 @@ class ResetController extends Controller {
 		]);
 
 		require Path::LAYOUT->value . "/header.php";
-
-		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/reset/index.php";
 

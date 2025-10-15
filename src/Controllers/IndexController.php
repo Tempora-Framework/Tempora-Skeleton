@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Enums\Path;
-use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
@@ -29,8 +28,6 @@ class IndexController extends Controller {
 		]);
 
 		require Path::LAYOUT->value . "/header.php";
-
-		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/index/index.php";
 

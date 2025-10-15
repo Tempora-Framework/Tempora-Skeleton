@@ -3,7 +3,6 @@
 namespace App\Controllers\Accounts;
 
 use App\Enums\Path;
-use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
@@ -14,6 +13,7 @@ class LoginController extends Controller {
 		method: "GET",
 		description: "Login page",
 		title: "LOGIN_TITLE",
+		translateTitle: true,
 		needLoginToBe: false
 	)]
 
@@ -37,8 +37,6 @@ class LoginController extends Controller {
 		]);
 
 		require Path::LAYOUT->value . "/header.php";
-
-		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/login/index.php";
 

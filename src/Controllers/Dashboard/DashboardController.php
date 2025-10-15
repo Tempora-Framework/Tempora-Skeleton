@@ -4,17 +4,17 @@ namespace App\Controllers\Dashboard;
 
 use App\Enums\Path;
 use App\Enums\Role;
-use App\Factories\NavbarFactory;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 
-class DashboardController extends Controller{
+class DashboardController extends Controller {
 	#[RouteAttribute(
 		path: "/dashboard",
 		name: "app_dashboard_get",
 		method: "GET",
 		description: "Dashboard page",
 		title: "DASHBOARD_TITLE",
+		translateTitle: true,
 		needLoginToBe: true,
 		accessRoles: [
 			Role::ADMINISTRATOR
@@ -35,8 +35,6 @@ class DashboardController extends Controller{
 		]);
 
 		require Path::LAYOUT->value . "/header.php";
-
-		(new NavbarFactory)->render();
 
 		require Path::LAYOUT->value . "/dashboard/index.php";
 

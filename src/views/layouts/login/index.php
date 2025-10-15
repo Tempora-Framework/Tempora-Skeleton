@@ -1,6 +1,8 @@
 <?php
 	use App\Enums\Path;
 	use Tempora\Utils\Lang;
+
+	include Path::COMPONENT_ACTIONS->value . "/navbar.php";
 ?>
 
 <div class="login_container">

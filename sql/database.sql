@@ -19,12 +19,16 @@ CREATE TABLE `users` (
 -- Trigger for table `users`
 --
 
-CREATE OR REPLACE TRIGGER add_role
+DELIMITER $$
+
+CREATE TRIGGER add_role
 AFTER INSERT
 ON users FOR EACH ROW
 BEGIN
 	INSERT INTO user_role (uid_user) VALUES (NEW.uid);
-END
+END$$
+
+DELIMITER ;
 
 --
 -- Table structure for table `roles`
