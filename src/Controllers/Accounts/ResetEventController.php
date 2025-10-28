@@ -17,7 +17,7 @@ class ResetEventController extends Controller {
 		method: "POST"
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		$pageData = $this->getPageData();
 
 		if (

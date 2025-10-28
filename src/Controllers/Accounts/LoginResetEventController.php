@@ -17,7 +17,7 @@ class LoginResetEventController extends Controller {
 		method: "POST"
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		if (
 			System::checkCSRF()
 			&& isset($_POST["email"])

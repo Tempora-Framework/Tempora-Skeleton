@@ -14,7 +14,7 @@ class IndexController extends Controller {
 		description: "Index page",
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		$pageData = $this->getPageData();
 
 		$this->setStyles(styles: [

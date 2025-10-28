@@ -17,7 +17,7 @@ class LoginController extends Controller {
 		needLoginToBe: false
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		$pageData = $this->getPageData();
 
 		if (isset($pageData["form_email"])) {

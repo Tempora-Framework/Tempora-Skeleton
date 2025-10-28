@@ -16,7 +16,7 @@ class RegisterEventController extends Controller {
 		method: "POST"
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		if (
 			System::checkCSRF()
 			&& isset($_POST["name"])
@@ -40,7 +40,7 @@ class RegisterEventController extends Controller {
 				$uid = $userRepo->create();
 
 				if ($uid instanceof Exception) {
-					$notificationCookie->setValue(value: Lang::translate(key: "REGISTER_ALREADY_EXIST", options: ["email" => htmlspecialchars(string: $_POST["email"])]));
+					$notificationCookie->setValue(value: Lang::translate(key: "REGISTER_ALREADY_EXIST", data: ["email" => htmlspecialchars(string: $_POST["email"])]));
 					$notificationCookie->send();
 				} else {
 					$_SESSION["user"]["uid"] = $uid;

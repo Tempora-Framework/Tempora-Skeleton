@@ -19,7 +19,7 @@ class ResetController extends Controller {
 		needLoginToBe: false
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		$pageData = $this->getPageData();
 
 		$resetPasswordRepo = new ResetPasswordRepository;

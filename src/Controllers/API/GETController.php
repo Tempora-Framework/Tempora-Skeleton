@@ -14,7 +14,7 @@ class GETController extends Controller {
 		description: "API index page",
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		header(header: "Content-Type: application/json");
 
 		$data["name"] = APP_NAME;

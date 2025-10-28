@@ -17,7 +17,7 @@ class LoginResetController extends Controller {
 		needLoginToBe: false
 	)]
 
-	public function __invoke(): void {
+	public function render(): void {
 		$pageData = $this->getPageData();
 
 		$this->setStyles(styles: [
