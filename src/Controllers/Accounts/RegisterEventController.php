@@ -3,6 +3,7 @@
 namespace App\Controllers\Accounts;
 
 use App\Models\Repositories\UserRepository;
+use PDOException;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
 use Tempora\Utils\Cookie;
@@ -39,7 +40,10 @@ class RegisterEventController extends Controller {
 
 				$uid = $userRepo->create();
 
-				if ($uid instanceof Exception) {
+				if (
+					$uid instanceof Exception
+					|| $uid instanceof PDOException
+				) {
 					$notificationCookie->setValue(value: Lang::translate(key: "REGISTER_ALREADY_EXIST", data: ["email" => htmlspecialchars(string: $_POST["email"])]));
 					$notificationCookie->send();
 				} else {
