@@ -18,6 +18,8 @@ class RegisterEventController extends Controller {
 	)]
 
 	public function render(): void {
+		$pageLang = new Lang(filePath: "pages/register");
+
 		if (
 			System::checkCSRF()
 			&& isset($_POST["name"])
@@ -44,14 +46,14 @@ class RegisterEventController extends Controller {
 					$uid instanceof Exception
 					|| $uid instanceof PDOException
 				) {
-					$notificationCookie->setValue(value: Lang::translate(key: "REGISTER_ALREADY_EXIST", data: ["email" => htmlspecialchars(string: $_POST["email"])]));
+					$notificationCookie->setValue(value: $pageLang->translate(key: "REGISTER_ALREADY_EXIST", data: ["email" => htmlspecialchars(string: $_POST["email"])]));
 					$notificationCookie->send();
 				} else {
 					$_SESSION["user"]["uid"] = $uid;
 					System::redirect(url: "/");
 				}
 			} else {
-				$notificationCookie->setValue(value: Lang::translate(key: "REGISTER_UNIDENTICAL_PASSWORD"));
+				$notificationCookie->setValue(value: $pageLang->translate(key: "REGISTER_UNIDENTICAL_PASSWORD"));
 				$notificationCookie->send();
 			}
 

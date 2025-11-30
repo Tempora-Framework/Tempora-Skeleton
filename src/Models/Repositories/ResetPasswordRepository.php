@@ -19,6 +19,7 @@ class ResetPasswordRepository extends ResetPassword {
 	 */
 	public function generateResetLink(): void {
 		$link = System::uidGen(size: 32);
+		$mailLang = new Lang(filePath: "main/mail");
 
 		ApplicationData::request(
 			query: "INSERT INTO " . Table::USER_RESET_PASSWORD->value . " (uid_user, link) VALUES (:uid, :link)",
@@ -31,10 +32,10 @@ class ResetPasswordRepository extends ResetPassword {
 		$mailService = new MailService;
 		$mailService
 			->setReceiver(receiver: $this->getEmail())
-			->setObject(object: Lang::translate(key: "MAIL_RESET_PASSWORD_OBJECT"))
+			->setObject(object: $mailLang->translate(key: "MAIL_RESET_PASSWORD_OBJECT"))
 			->setBody(
-				body: Lang::translate(key: "MAIL_RESET_PASSWORD_BODY",
-					options: [
+				body: $mailLang->translate(key: "MAIL_RESET_PASSWORD_BODY",
+					data: [
 						"domain" => $_SERVER["SERVER_NAME"],
 						"link" => $link
 					]

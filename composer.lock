@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0dc3e7c1d235c8927248be50ae9db686",
+    "content-hash": "3e34e18a41e97ef3dcd2571d3111ff1a",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -664,17 +664,11 @@
         },
         {
             "name": "tempora-framework/tempora",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Tempora-Framework/Tempora.git",
-                "reference": "82691c575ba00d04d8b0fd11cf47e4ecd5332b66"
-            },
+            "version": "dev-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Tempora-Framework/Tempora/zipball/82691c575ba00d04d8b0fd11cf47e4ecd5332b66",
-                "reference": "82691c575ba00d04d8b0fd11cf47e4ecd5332b66",
-                "shasum": ""
+                "type": "path",
+                "url": "../Tempora",
+                "reference": "72a0b56f9a9aeb1f10e873914f9883c6d1cc83bc"
             },
             "require": {
                 "firebase/php-jwt": "^6.11",
@@ -692,7 +686,11 @@
                     "Tempora\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always --display-deprecations src/Tests"
+                ]
+            },
             "license": [
                 "CC-BY-4.0"
             ],
@@ -711,11 +709,10 @@
                 "mvc",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/Tempora-Framework/Tempora/issues",
-                "source": "https://github.com/Tempora-Framework/Tempora/tree/v1.3.0"
-            },
-            "time": "2025-10-15T21:21:44+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "vlucas/phpdotenv",
@@ -805,7 +802,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "tempora-framework/tempora": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

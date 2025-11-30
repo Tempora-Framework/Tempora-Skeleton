@@ -138,7 +138,8 @@ nav {
 .register,
 .account,
 .login_reset,
-.reset_password {
+.reset_password,
+.update_password {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;

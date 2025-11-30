@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Enums\Path;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
+use Tempora\Utils\Lang;
 
 class IndexController extends Controller {
 	#[RouteAttribute(
@@ -16,6 +17,7 @@ class IndexController extends Controller {
 
 	public function render(): void {
 		$pageData = $this->getPageData();
+		$pageLang = new Lang(filePath: "pages/index");
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",

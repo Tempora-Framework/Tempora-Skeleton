@@ -6,6 +6,7 @@ use App\Enums\Path;
 use App\Enums\Role;
 use Tempora\Attributes\RouteAttribute;
 use Tempora\Controllers\Controller;
+use Tempora\Utils\Lang;
 
 class DashboardController extends Controller {
 	#[RouteAttribute(
@@ -15,6 +16,7 @@ class DashboardController extends Controller {
 		description: "Dashboard page",
 		title: "DASHBOARD_TITLE",
 		translateTitle: true,
+		translateFile: "pages/dashboard",
 		needLoginToBe: true,
 		accessRoles: [
 			Role::ADMINISTRATOR
@@ -23,6 +25,7 @@ class DashboardController extends Controller {
 
 	public function render(): void {
 		$pageData = $this->getPageData();
+		$pageLang = new Lang(filePath: "pages/dashboard");
 
 		$this->setStyles(styles: [
 			"/assets/styles/main.css",

@@ -19,6 +19,7 @@ class ResetEventController extends Controller {
 
 	public function render(): void {
 		$pageData = $this->getPageData();
+		$pageLang = new Lang(filePath: "pages/reset");
 
 		if (
 			System::checkCSRF()
@@ -46,7 +47,7 @@ class ResetEventController extends Controller {
 				$notificationCookie = new Cookie;
 				$notificationCookie
 					->setName(name: "NOTIFICATION")
-					->setValue(value: Lang::translate(key: "REGISTER_UNIDENTICAL_PASSWORD"))
+					->setValue(value: $pageLang->translate(key: "REGISTER_UNIDENTICAL_PASSWORD"))
 				;
 				$notificationCookie->send();
 			}

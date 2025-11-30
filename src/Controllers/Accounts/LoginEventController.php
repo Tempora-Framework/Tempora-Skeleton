@@ -19,6 +19,8 @@ class LoginEventController extends Controller {
 	)]
 
 	public function render(): void {
+		$pageLang = new Lang(filePath: "pages/login");
+
 		if (
 			System::checkCSRF()
 			&& isset($_POST["email"])
@@ -36,7 +38,7 @@ class LoginEventController extends Controller {
 				$notificationCookie = new Cookie;
 				$notificationCookie
 					->setName(name: "NOTIFICATION")
-					->setValue(value: Lang::translate(key: "LOGIN_WRONG_CREDENTIALS"))
+					->setValue(value: $pageLang->translate(key: "LOGIN_WRONG_CREDENTIALS"))
 				;
 				$notificationCookie->send();
 
