@@ -15,12 +15,15 @@ class GETController extends Controller {
 	)]
 
 	public function render(): void {
-		header(header: "Content-Type: application/json");
+		$data = [
+			"name" => APP_NAME,
+			"version" => TEMPORA_VERSION,
+		];
 
-		$data["name"] = APP_NAME;
-		$data["version"] = TEMPORA_VERSION;
-
-		$api = new APIService;
-		echo $api(data: $data);
+		(new APIService)
+			->setStatusCode(statusCode: 200)
+			->setData(data: $data)
+			->render()
+		;
 	}
 }
