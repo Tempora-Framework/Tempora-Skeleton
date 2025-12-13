@@ -7,16 +7,6 @@
 	use Tempora\Utils\Minifier\Image;
 
 	$componentNavbarLang = new Lang(filePath: "components/actions/navbar");
-
-	$itemContainer = new ElementBuilder();
-	$itemContainer
-		->setElement(element: "div")
-		->setAttributs(
-			attributs: [
-				"class" => "item",
-			]
-		)
-	;
 ?>
 
 <nav>
@@ -45,7 +35,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -63,7 +59,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -87,7 +89,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -106,7 +114,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
@@ -126,7 +140,13 @@
 	?>
 
 	<?=
-		$itemContainer
+		(new ElementBuilder())
+			->setElement(element: "div")
+			->setAttributs(
+				attributs: [
+					"class" => "item",
+				]
+			)
 			->setContent(content:
 				(new ElementBuilder)
 					->setElement(element: "a")
