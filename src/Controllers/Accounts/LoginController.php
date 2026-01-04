@@ -29,15 +29,19 @@ class LoginController extends Controller {
 			];
 		}
 
-		$this->setStyles(styles: [
-			"/assets/styles/main.css",
-			"/assets/styles/remixicon.css"
-		]);
-
-		$this->setScripts(scripts: [
-			"/assets/scripts/engine.js",
-			"/assets/scripts/theme.js"
-		]);
+		$this
+			->setHeaders(headers: [
+				"Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+			])
+			->setStyles(styles: [
+				"/assets/styles/main.css",
+				"/assets/styles/remixicon.css"
+			])
+			->setScripts(scripts: [
+				"/assets/scripts/engine.js",
+				"/assets/scripts/theme.js"
+			])
+		;
 
 		require Path::LAYOUT->value . "/header.php";
 

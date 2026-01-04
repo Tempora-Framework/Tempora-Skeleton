@@ -7,16 +7,16 @@ use Tempora\Enums\Table;
 use Tempora\Utils\ApplicationData;
 
 class ResetPassword {
-	private ?string $uid;
-	private ?string $link;
-	private ?string $email;
+	private ?string $uid = null;
+	private ?string $link = null;
+	private ?string $email = null;
 
 	/**
 	 * Get the value of uid
 	 *
-	 * @return string
+	 * @return string | null
 	 */
-	public function getUid(): string {
+	public function getUid(): string | null {
 		return $this->uid;
 	}
 
@@ -47,9 +47,9 @@ class ResetPassword {
 	/**
 	 * Get the value of link
 	 *
-	 * @return string
+	 * @return string | null
 	 */
-	public function getLink(): string {
+	public function getLink(): string | null {
 		return $this->link;
 	}
 
@@ -69,9 +69,9 @@ class ResetPassword {
 	/**
 	 * Get the value of email
 	 *
-	 * @return string
+	 * @return string | null
 	 */
-	public function getEmail(): string {
+	public function getEmail(): string | null {
 		return $this->email;
 	}
 
