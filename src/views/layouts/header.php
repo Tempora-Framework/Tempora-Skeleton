@@ -13,7 +13,7 @@
 		<meta name="description" content="<?= $pageData["page_description"] ?>">
 	<?php } ?>
 
-	<title><?= $pageData["page_title"] ?? APP_NAME ?></title>
+	<title><?= $pageData["page_title"] ?? (defined(constant_name: "APP_NAME") ? APP_NAME : "") ?></title>
 
 	<?php $this->includeAssets(); ?>
 	<?php $this->includePayloads(); ?>

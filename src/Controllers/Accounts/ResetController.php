@@ -37,11 +37,20 @@ class ResetController extends Controller {
 
 		$this
 			->setHeaders(headers: [
-				"Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+				implode(
+					separator: " ",
+					array: [
+						"Content-Security-Policy: default-src 'self' https://cdn.jsdelivr.net/ https://fonts.googleapis.com/ https://fonts.gstatic.com/;",
+						"frame-ancestors 'none';",
+						"base-uri 'self';",
+						"form-action 'self';"
+					]
+				)
 			])
 			->setStyles(styles: [
 				"/assets/styles/main.css",
-				"/assets/styles/remixicon.css"
+				ASSET_REMIXICON_CSS,
+				ASSET_INTER_FONT
 			])
 			->setScripts(scripts: [
 				"/assets/scripts/engine.js",
