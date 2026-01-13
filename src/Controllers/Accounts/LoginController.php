@@ -43,8 +43,8 @@ class LoginController extends Controller {
 			])
 			->setStyles(styles: [
 				"/assets/styles/main.css",
-				ASSET_REMIXICON_CSS,
-				ASSET_INTER_FONT
+				ASSET_ICONS_CSS,
+				ASSET_FONT
 			])
 			->setScripts(scripts: [
 				"/assets/scripts/engine.js",
